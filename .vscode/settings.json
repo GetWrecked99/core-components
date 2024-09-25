@@ -1,0 +1,35 @@
+{
+    "scm.diffDecorationsIgnoreTrimWhitespace": "true",
+    "files.trimTrailingWhitespace": true,
+    "eslint.enable": true,
+    "eslint.validate": ["javascript", "typescript", "javascriptreact", "typescriptreact", "json"],
+    "editor.formatOnSave": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.configPath": ".prettierrc.json",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "explorer.compactFolders": false,
+    "css.lint.unknownAtRules": "ignore",
+    "scss.lint.unknownAtRules": "ignore",
+    "cSpell.language": "en,fa",
+    "cSpell.words": ["commitlint", "nextjs", "pnpx", "tailwindcss"],
+    "scss.validate": false
+}
