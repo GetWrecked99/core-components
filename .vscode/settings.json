@@ -30,6 +30,6 @@
     "css.lint.unknownAtRules": "ignore",
     "scss.lint.unknownAtRules": "ignore",
     "cSpell.language": "en,fa",
-    "cSpell.words": ["commitlint", "nextjs", "pnpx", "tailwindcss"],
+    "cSpell.words": ["clsx", "commitlint", "nextjs", "pnpx", "tailwindcss"],
     "scss.validate": false
 }
