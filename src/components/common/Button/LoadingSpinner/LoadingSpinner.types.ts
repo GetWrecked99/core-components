@@ -1,4 +1,4 @@
-import { type IDivElementProps } from '@/app/core/types/html'
+import { type IDivElementProps } from '@core/types/html'
 
 import type { TButtonSizesType, TButtonVariantsType } from '../Button.types'
 

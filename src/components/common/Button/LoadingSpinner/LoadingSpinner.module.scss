@@ -1,0 +1,12 @@
+.root {
+    @apply absolute inset-0 grid place-items-center;
+    @apply visible opacity-100 #{!important};
+
+    /* Sizes */
+
+    /* Variants */
+}
+
+.svg {
+    @apply mx-auto size-5 animate-spin fill-white text-neutral-700 dark:text-neutral-900;
+}

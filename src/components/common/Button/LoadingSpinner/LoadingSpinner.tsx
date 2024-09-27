@@ -1,16 +1,11 @@
-import { cn } from '@/app/core/utils/common/cn'
+import { cn } from '@core/utils/common/cn'
 
 import { default as styles } from './LoadingSpinner.module.scss'
 import type { default as ILoadingSpinnerProps } from './LoadingSpinner.types'
 
 const LoadingSpinner = ({ classNames, variant, size, ...rest }: ILoadingSpinnerProps) => {
     return (
-        <div
-            data-size={size}
-            data-variant={variant}
-            className={cn(styles.root, 'button-spinner', classNames?.root)}
-            {...rest}
-        >
+        <div data-size={size} data-variant={variant} className={cn(styles.root, classNames?.root)} {...rest}>
             <div role='status'>
                 <svg
                     aria-hidden='true'

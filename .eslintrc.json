@@ -1,51 +1,50 @@
 {
-  "root": true,
-  "plugins": ["@typescript-eslint", "simple-import-sort"],
-  "extends": ["next/core-web-vitals", "next/typescript", "plugin:@typescript-eslint/recommended", "prettier"],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "project": "./tsconfig.json",
-    "tsconfigRootDir": "./"
-  },
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-      "rules": {
-        "simple-import-sort/imports": [
-          "error",
-          {
-            "groups": [
-              ["^react$", "^next", "^react", "^W*", "@(?!(packages|styles|public))"],
-              ["^@components"],
-              ["^@core"],
-              ["^@styles"],
-              ["^@public"],
-              ["^\\u0000"],
-              ["^\\./", "^\\../"]
-            ]
-          }
-        ]
-      }
+    "root": true,
+    "plugins": ["@typescript-eslint", "simple-import-sort"],
+    "extends": ["next/core-web-vitals", "next/typescript", "plugin:@typescript-eslint/recommended", "prettier"],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": "./tsconfig.json",
+        "tsconfigRootDir": "./"
     },
-    {
-      "files": ["*.ts", "*.tsx"],
-      "rules": {
-        "@typescript-eslint/consistent-type-imports": [
-          "error",
-          {
-            "prefer": "type-imports",
-            "disallowTypeAnnotations": true,
-            "fixStyle": "inline-type-imports"
-          }
-        ],
+    "overrides": [
+        {
+            "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+            "rules": {
+                "simple-import-sort/imports": [
+                    "error",
+                    {
+                        "groups": [
+                            ["^react$", "^next", "^react", "^W*", "@(?!(components|core|public))"],
+                            ["^@components"],
+                            ["^@core"],
+                            ["^@public"],
+                            ["^\\u0000"],
+                            ["^\\./", "^\\../"]
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "files": ["*.ts", "*.tsx"],
+            "rules": {
+                "@typescript-eslint/consistent-type-imports": [
+                    "error",
+                    {
+                        "prefer": "type-imports",
+                        "disallowTypeAnnotations": true,
+                        "fixStyle": "inline-type-imports"
+                    }
+                ],
 
-        "@typescript-eslint/no-empty-interface": [
-          "error",
-          {
-            "allowSingleExtends": true
-          }
-        ]
-      }
-    }
-  ]
+                "@typescript-eslint/no-empty-interface": [
+                    "error",
+                    {
+                        "allowSingleExtends": true
+                    }
+                ]
+            }
+        }
+    ]
 }

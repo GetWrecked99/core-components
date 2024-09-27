@@ -2,11 +2,11 @@ import { type ComponentPropsWithoutRef, type ElementType, type PropsWithChildren
 
 import { type ILoadingSpinnerProps } from './LoadingSpinner'
 
-type TButtonVariantsType = 'Filled' | 'Outline' | 'Link' | 'Tinted' | 'None'
+type TButtonVariantsType = 'Set' | 'From' | 'Your' | 'Design' | 'System'
 
-type TButtonColorsType = 'Primary' | 'Secondary' | 'Success' | 'Error' | 'Warning' | 'Neutral'
+type TButtonColorsType = 'Set' | 'From' | 'Your' | 'Design' | 'System'
 
-type TButtonSizesType = 'xl' | 'lg' | 'md' | 'sm' | 'icon' | 'none'
+type TButtonSizesType = 'Set' | 'From' | 'Your' | 'Design' | 'System'
 
 type TButtonType<T extends ElementType> = {
     component?: T
@@ -15,7 +15,7 @@ type TButtonType<T extends ElementType> = {
     endIcon?: JSX.Element
     size?: TButtonSizesType
     variant?: TButtonVariantsType
-    color: TButtonColorsType
+    color?: TButtonColorsType
     isLoading?: boolean
     spinner?: JSX.Element
     spinnerProps?: ILoadingSpinnerProps
@@ -25,12 +25,3 @@ type TButtonType<T extends ElementType> = {
 type IButtonProps<T extends ElementType> = PropsWithChildren<TButtonType<T>> & ComponentPropsWithoutRef<T>
 
 export type { IButtonProps, TButtonSizesType, TButtonVariantsType, TButtonColorsType }
-
-/**
- * @Author: GetWrecked
- * @Date: 2024-09-25 16:10:05
- * @Remains:
- * - Colors type based on radix or etc ...
- * - Type declaration via ForwardedRef ...
- * - Declare new style format via color variable
- */
