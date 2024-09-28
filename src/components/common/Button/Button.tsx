@@ -35,7 +35,7 @@ const Button = <T extends ElementType = 'button'>({
             {...rest}
         >
             {startIcon && <div className='button-start-icon'>{startIcon}</div>}
-            {children && <span>{children}</span>}
+            {children && <span className='button-content'>{children}</span>}
             {isLoading && <LoadingSpinner variant={variant} size={size} {...spinnerProps} />}
             {endIcon && <span className='button-end-icon'>{endIcon}</span>}
         </ComponentToRender>
