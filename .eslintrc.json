@@ -43,7 +43,9 @@
                     {
                         "allowSingleExtends": true
                     }
-                ]
+                ],
+
+                "@typescript-eslint/no-explicit-any": "warn"
             }
         }
     ]

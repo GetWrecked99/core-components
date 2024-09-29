@@ -1,0 +1,23 @@
+.root {
+    @apply flex flex-col gap-y-2;
+
+    :global(.checkbox-group-heading-wrapper) {
+        @apply flex flex-col;
+    }
+
+    :global(.checkbox-group-title-wrapper) {
+        @apply flex flex-row items-start gap-x-0.5;
+    }
+
+    &[data-orientation='vertical'] {
+        :global(.checkbox-group-body-wrapper) {
+            @apply flex flex-col items-start gap-y-2;
+        }
+    }
+
+    &[data-orientation='horizontal'] {
+        :global(.checkbox-group-body-wrapper) {
+            @apply flex flex-row flex-wrap items-start gap-x-6;
+        }
+    }
+}

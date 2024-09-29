@@ -1,0 +1,39 @@
+.root {
+    @apply flex flex-row items-start gap-x-3;
+
+    &[data-disabled='true'] {
+        :global(.checkbox-label) {
+            @apply cursor-not-allowed;
+        }
+    }
+
+    :global(.contentWrapperClass) {
+        @apply flex flex-col;
+    }
+
+    :global(.checkbox-label) {
+        @apply tw-body1Strong text-neutral-1200 cursor-pointer;
+    }
+
+    :global(.checkbox-description) {
+        @apply tw-caption1 text-neutral-1100 cursor-default;
+    }
+
+    :global(.checkbox-input) {
+        @apply relative grid place-content-center appearance-none m-0 font-[inherit] border-neutral-700 hover:border-neutral-800 cursor-pointer disabled:border-neutral-600 disabled:cursor-not-allowed;
+
+        &:checked {
+            @apply bg-primary-900 border-primary-900 text-white disabled:bg-neutral-600 disabled:border-neutral-600;
+        }
+
+        &:checked::after {
+            @apply absolute z-[1] left-1/2 block content-['\2713'] -translate-x-1/2 top-0;
+        }
+    }
+
+    /* Variants */
+
+    /* Colors */
+
+    /* Sizes */
+}
