@@ -1,5 +1,6 @@
 import { type ReactNode } from 'react'
-import { type IInputElementProps } from '@cms/types'
+
+import { type IInputElementProps } from '@core/types/html'
 
 interface IPasswordInputProps extends Omit<IInputElementProps, 'type' | 'className' | 'value' | 'onChange' | 'size'> {
     withAsterisk?: boolean

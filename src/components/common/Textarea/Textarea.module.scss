@@ -1,0 +1,47 @@
+.root {
+    @apply w-full flex flex-col gap-y-2;
+
+    :global(.textarea-label-wrapper) {
+        @apply flex flex-row items-start gap-x-0.5;
+
+        :global(.textarea-label) {
+            @apply text-neutral-900;
+        }
+
+        :global(.textarea-asterisk) {
+            @apply text-red-600;
+        }
+    }
+
+    :global(.textarea-wrapper) {
+        @apply relative w-full flex;
+
+        :global(.textarea) {
+            @apply w-full h-full outline-none border;
+
+            &[data-resize='both'] {
+                @apply resize;
+            }
+
+            &[data-resize='vertical'] {
+                @apply resize-y;
+            }
+
+            &[data-resize='horizontal'] {
+                @apply resize-x;
+            }
+
+            &[data-resize='none'] {
+                @apply resize-none;
+            }
+        }
+
+        &[data-disabled='true'] {
+            @apply cursor-not-allowed *:cursor-not-allowed;
+
+            :global(.textarea) {
+                @apply border-neutral-600 hover:border-neutral-600 text-neutral-600 placeholder:text-neutral-600;
+            }
+        }
+    }
+}
