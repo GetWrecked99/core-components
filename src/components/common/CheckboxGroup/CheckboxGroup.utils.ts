@@ -14,11 +14,11 @@ const processChildren = ({
         if (isValidElement(child)) {
             // Checks if the incoming element is a Checkbox component
             if (!!child.type && (child.type as any)[CHECKBOX_SYMBOL] === true) {
+                const val = child.props.value
                 return cloneElement(child as ReactElement<ICheckboxProps>, {
-                    checked: !!value.includes(child.props.value),
+                    checked: !!value.includes(val),
                     onChange: () => {
                         // Logic to toggle the checkbox value in the state
-                        const val = child.props.value
                         if (value.includes(val)) {
                             onChange(value.filter((item) => item !== val) ?? [])
                         } else {
