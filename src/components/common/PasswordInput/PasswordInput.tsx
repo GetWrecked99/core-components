@@ -2,13 +2,12 @@
 
 import { type ChangeEvent, forwardRef, useState } from 'react'
 
+import { CloseIcon, VisibilityIcon, VisibilityOffIcon } from '@components/icons'
+
 import { cn } from '@core/utils/common/cn'
 
-import CloseIcon from './CloseIcon'
 import { default as styles } from './PasswordInput.module.scss'
 import type { default as IPasswordInputProps } from './PasswordInput.types'
-import VisibilityIcon from './VisibilityIcon'
-import VisibilityOffIcon from './VisibilityOffIcon'
 
 const PasswordInput = forwardRef<HTMLInputElement, IPasswordInputProps>(
     (
@@ -24,7 +23,7 @@ const PasswordInput = forwardRef<HTMLInputElement, IPasswordInputProps>(
             eyeIcons,
             clearIcon = <CloseIcon />,
             isClearable = false,
-            size = 'md',
+            size = 'Design',
             disabled,
             placeholder = 'Enter your password',
             ...rest
@@ -54,7 +53,7 @@ const PasswordInput = forwardRef<HTMLInputElement, IPasswordInputProps>(
         const invisibleEyeIcon = eyeIcons?.invisible ?? <VisibilityOffIcon />
 
         return (
-            <div className={cn('password-input-root', styles.root, classNames?.root)}>
+            <div className={cn(styles.root, classNames?.root)}>
                 {/* Label & Asterisk */}
                 {label && (
                     <div className={cn('password-input-label-wrapper', classNames?.labelWrapper)}>

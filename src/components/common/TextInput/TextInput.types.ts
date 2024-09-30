@@ -2,13 +2,13 @@ import { type ReactNode } from 'react'
 
 import { type IInputElementProps } from '@core/types/html'
 
-type TPasswordInputVariantsType = 'Set' | 'From' | 'Your' | 'Design' | 'System'
+type TTextInputVariantsType = 'Set' | 'From' | 'Your' | 'Design' | 'System'
 
-type TPasswordInputColorsType = 'Set' | 'From' | 'Your' | 'Design' | 'System'
+type TTextInputColorsType = 'Set' | 'From' | 'Your' | 'Design' | 'System'
 
-type TPasswordInputSizesType = 'Set' | 'From' | 'Your' | 'Design' | 'System'
+type TTextInputSizesType = 'Set' | 'From' | 'Your' | 'Design' | 'System'
 
-interface IPasswordInputProps extends Omit<IInputElementProps, 'type' | 'className' | 'value' | 'onChange' | 'size'> {
+interface ITextInputProps extends Omit<IInputElementProps, 'type' | 'className' | 'value' | 'onChange' | 'size'> {
     withAsterisk?: boolean
     /** Make sure to not pass label element through. */
     label?: ReactNode
@@ -17,17 +17,14 @@ interface IPasswordInputProps extends Omit<IInputElementProps, 'type' | 'classNa
     /** For optimal user interface design, please provide an icon with dimensions of 24 pixels in width and height. */
     startIcon?: ReactNode
     /** For optimal user interface design, please provide an icon with dimensions of 16 pixels in width and height. */
-    eyeIcons?: {
-        visible: ReactNode
-        invisible: ReactNode
-    }
+    endIcon?: ReactNode
     isClearable?: boolean
     onClear?: () => void
     /** For optimal user interface design, please provide an icon with dimensions of 16 pixels in width and height. */
     clearIcon?: ReactNode
-    variant?: TPasswordInputVariantsType
-    color?: TPasswordInputColorsType
-    size?: TPasswordInputSizesType
+    variant?: TTextInputVariantsType
+    color?: TTextInputColorsType
+    size?: TTextInputSizesType
     classNames?: {
         root?: string
         labelWrapper?: string
@@ -43,4 +40,4 @@ interface IPasswordInputProps extends Omit<IInputElementProps, 'type' | 'classNa
     }
 }
 
-export default IPasswordInputProps
+export default ITextInputProps

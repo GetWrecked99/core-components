@@ -1,4 +1,4 @@
-import { type ISvgElementProps } from '@cms/types'
+import { type ISvgElementProps } from '@core/types/html'
 
 const CloseIcon = ({ ...rest }: ISvgElementProps) => {
     return (
