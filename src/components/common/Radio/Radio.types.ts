@@ -6,13 +6,13 @@ import { type default as RADIO_SYMBOL } from './Radio.symbols'
 
 type TRadioColorsType = 'Set' | 'From' | 'Your' | 'Design' | 'System'
 
-type TCheckboxSizesType = 'Set' | 'From' | 'Your' | 'Design' | 'System'
+type TRadioSizesType = 'Set' | 'From' | 'Your' | 'Design' | 'System'
 
 interface IRadioProps extends Omit<IInputElementProps, 'type' | 'size' | 'children' | 'className'> {
     /** Make sure to insert string in most use cases */
     label: ReactNode
     color?: TRadioColorsType
-    size?: TCheckboxSizesType
+    size?: TRadioSizesType
     /** Make sure to insert string in most use cases */
     description?: ReactNode
     classNames?: {
